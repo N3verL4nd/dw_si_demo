@@ -1,2 +1,26 @@
 # 医保接口测试程序
 ![演示图](/ScreenShot_2026-03-20_202653_183.png)
+
+自行修改app.config
+```
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="JwsServiceImplPortBinding" maxBufferPoolSize="2147483647" maxReceivedMessageSize="2147483647"/>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://地纬服务IP:端口/mhs5/siSettleService"
+                binding="basicHttpBinding" bindingConfiguration="JwsServiceImplPortBinding"
+                contract="service.IMsh5Service" name="JwsServiceImplPort" />
+        </client>
+    </system.serviceModel>
+		<appSettings>
+		<add key="dwUser" value="用户名"/>
+		<add key="dwPass" value="密码"/>
+		<add key="hospitalNo" value="医院编码"/>
+	</appSettings>
+</configuration>
+```
