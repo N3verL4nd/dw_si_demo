@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.communication.service.dareway.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="JwsServiceImplService" targetNamespace="http://service.communication.service.dareway.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types />
+  <message name="login">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="loginResponse">
+    <part name="loginResult" type="xsd:string" />
+  </message>
+  <message name="loginByYybm">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+  </message>
+  <message name="loginByYybmResponse">
+    <part name="loginResult1" type="xsd:string" />
+  </message>
+  <message name="invoke">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+  </message>
+  <message name="invokeResponse">
+    <part name="resultContent" type="xsd:string" />
+  </message>
+  <message name="invokeSi">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+  </message>
+  <message name="invokeSiResponse">
+    <part name="resultContent" type="xsd:string" />
+  </message>
+  <message name="invokeCotton">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:string" />
+  </message>
+  <message name="invokeCottonResponse">
+    <part name="resultContent" type="xsd:string" />
+  </message>
+  <message name="dipInvoke">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+  </message>
+  <message name="dipInvokeResponse">
+    <part name="resultContent" type="xsd:string" />
+  </message>
+  <message name="pipInvoke">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:string" />
+  </message>
+  <message name="pipInvokeResponse">
+    <part name="resultContent" type="xsd:string" />
+  </message>
+  <message name="invokeCheckZcm">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:string" />
+  </message>
+  <message name="invokeCheckZcmResponse">
+    <part name="resultContent" type="xsd:string" />
+  </message>
+  <portType name="IMsh5Service">
+    <operation name="login" parameterOrder="arg0 arg1">
+      <input message="tns:login" />
+      <output message="tns:loginResponse" />
+    </operation>
+    <operation name="loginByYybm" parameterOrder="arg0 arg1 arg2">
+      <input message="tns:loginByYybm" />
+      <output message="tns:loginByYybmResponse" />
+    </operation>
+    <operation name="invoke" parameterOrder="arg0 arg1 arg2 arg3 arg4">
+      <input message="tns:invoke" />
+      <output message="tns:invokeResponse" />
+    </operation>
+    <operation name="invokeSi" parameterOrder="arg0 arg1 arg2 arg3 arg4">
+      <input message="tns:invokeSi" />
+      <output message="tns:invokeSiResponse" />
+    </operation>
+    <operation name="invokeCotton" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
+      <input message="tns:invokeCotton" />
+      <output message="tns:invokeCottonResponse" />
+    </operation>
+    <operation name="dipInvoke" parameterOrder="arg0 arg1 arg2">
+      <input message="tns:dipInvoke" />
+      <output message="tns:dipInvokeResponse" />
+    </operation>
+    <operation name="pipInvoke" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
+      <input message="tns:pipInvoke" />
+      <output message="tns:pipInvokeResponse" />
+    </operation>
+    <operation name="invokeCheckZcm" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
+      <input message="tns:invokeCheckZcm" />
+      <output message="tns:invokeCheckZcmResponse" />
+    </operation>
+  </portType>
+  <binding name="JwsServiceImplPortBinding" type="tns:IMsh5Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </output>
+    </operation>
+    <operation name="loginByYybm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </output>
+    </operation>
+    <operation name="invoke">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </output>
+    </operation>
+    <operation name="invokeSi">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </output>
+    </operation>
+    <operation name="invokeCotton">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </output>
+    </operation>
+    <operation name="dipInvoke">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </output>
+    </operation>
+    <operation name="pipInvoke">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </output>
+    </operation>
+    <operation name="invokeCheckZcm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://service.communication.service.dareway.com/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="JwsServiceImplService">
+    <port name="JwsServiceImplPort" binding="tns:JwsServiceImplPortBinding">
+      <soap:address location="http://192.192.15.249:7001/mhs5/siSettleService" />
+    </port>
+  </service>
+</definitions>
